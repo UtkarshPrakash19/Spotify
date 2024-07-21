@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root
+{
+  --a:0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  gap: 10px;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.left {
+  width: 86vh;
+  margin: 16px, 0;
+}
+.right {
+  width: 246vh;
+  position: relative;
+}
+.library {
+  color: white;
+  gap: 5px;
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+.home ul li {
+  display: flex;
+  gap: 10px;
+  width: 23px;
+  list-style: none;
+  padding-top: 13px;
+}
+.heading {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding-top: 14px;
+  align-items: center;
+  font-size: 13px;
+}
+.heading img {
+  width: 30px;
+}
+.footer {
+  display: flex;
+  font-size: 10px;
+  color: grey;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.footer a {
+  color: grey;
+}
+.header {
+  margin: 6px;
+  border-radius: 5px;
+}
+.header * {
+  padding: 2px;
+  margin: 2px;
+  gap: 5px;
+}
+.cardcontainer {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-height: 50vh;
+  overflow-y: scroll;
+  border-radius: 2px;
+}
+
+/* Customize scrollbar */
+.cardcontainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cardcontainer::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0); /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.cardcontainer::-webkit-scrollbar-track {
+  background-color: #000000; /* Scrollbar track color */
+}
+
+.card {
+  padding: 10px;
+  width: 111px;
+  border-radius: 5px;
+  background-color: rgb(18, 18, 18);
+  transition: all 0.5s ease-out;
+}
+
+.card > * {
+  padding-top: 1px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card:hover {
+  background-color: rgb(58, 58, 58);
+  cursor: pointer;
+  --a:1;
+}
+.play
+{
+  color: #00ff00;
+  opacity:var(--a) ;
+  transition: all .3s ease;
+}
+.SignUpbtn {
+  background-color: rgba(137, 22, 22, 0);
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+.SignUpbtn:hover {
+  z-index: 5;
+  color: #00ff00;
+}
+.LogInbtn {
+  border-radius: 54px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+.LogInbtn:hover {
+  z-index: 5;
+  color: #00ff00;
+}
+.button {
+  gap: 5px;
+}
+.playbar {
+  position: fixed;
+  bottom: 20PX;
+  background-color: rgb(18, 18, 18);
+  width: 68%;
+  padding: 10px;
+  display: flex;
+  border-radius: 7px;
+  justify-content: center;
+  color: rgb(252, 0, 0);
+  gap: 5px;
+  margin: 5px;
+}
+.prevbutton,
+.playButton,
+.nextButton {
+  border-radius: 54px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+.songsList {
+  margin: 7px;
+  max-height: 40vh;
+  overflow-y: scroll;
+  border-radius: 7px;
+}
+/* Customize scrollbar */
+.songsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.songsList::-webkit-scrollbar-thumb {
+  background-color: rgb(18, 18, 18); /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+.songsList::-webkit-scrollbar-track {
+  background-color: rgb(18, 18, 18); /* Scrollbar track color */
+}
+.songsList ul li {
+  list-style-type: decimal;
+  display: flex;
+  gap: 9px;
+  cursor: pointer;
+  padding: 12px 0;
+  background-color: #000000;
+  border-radius: 7px;
+  justify-content: space-between;
+  padding: 6px;
+  font-size: 10px;
+  margin: 3px;
+  border-style: groove;
+  border-color: rgb(19, 19, 19);
+}
+.playNow {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.seekbar {
+  width: 80%;
+  position: absolute;
+  bottom: 11px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  height: 5px;
+  cursor: pointer;
+  background-color: red;
+}
+.circle
+{
+  width: 15px;
+  height: 15px;
+  background: #00ff00;
+  border-radius: 30px;
+  position:relative;
+  bottom: 5px;
+  left: 0%;
+  transition: left .5s;
+}.songsinfo
+{
+  color: rgb(255, 255, 255);
+  padding: 19px;
+}
+.songstime
+{
+  color: rgb(255, 255, 255);
+  padding: 19px;
+}
